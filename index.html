@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="That is only a simulation of the website  lieferando to practice html, css and javascript"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./fonts.css" />
+		<title>Liefering</title>
+		<link
+			rel="shortcut icon"
+			href="./img//icons/restaurant.svg"
+			type="image/x-icon"
+		/>
+	</head>
+	<body onload="includeHTML()">
+		<!-- Navigation -->
+		<header w3-include-html="templates/nav.html"></header>
+		<!-- Restaurant -->
+		<main>
+			<section class="main-section">
+				<section id="restaurant-container" class="restaurant-container">
+					<div class="hero">
+						<img class="aot" src="./img/aot.jpg" alt="Nudeln" />
+						<img
+							class="logo-restaurant"
+							src="./img/logoRestaurant.png"
+							alt="Logo Restaurant"
+						/>
+					</div>
+					<div class="restaurant-info-container margin-x-64 margin-bottom-16">
+						<div class="restaurant-info">
+							<h2>Royal Sushi</h2>
+							<p class="raiting"></p>
+							<p>
+								<img src="./img//icons/raiting.svg" alt="" />
+								<span>4.9(+200)</span>
+							</p>
+							<p>
+								<img src="./img/icons/shoppingBag.svg" alt="shoping bag" /><span
+									>Min. 50,00€</span
+								><strong>・</strong
+								><img
+									class="green-fill"
+									src="./img/icons/bike.svg"
+									alt="bike"
+								/><span class="green-color">Free</span>
+							</p>
+						</div>
+						<div class="restaurant-favorite">
+							<img
+								class="border-circle-gray"
+								src="./img/icons/info.svg"
+								alt="info"
+							/>
+							<img
+								class="border-circle-gray"
+								src="./img/icons/favorite.svg"
+								alt="favorite"
+							/>
+						</div>
+					</div>
+					<div class="categories-container margin-x-64 margin-bottom-16">
+						<img
+							class="border-circle-gray"
+							src="./img/icons/search.svg"
+							alt=""
+						/>
+						<div id="categoriesMenu" class="categories"></div>
+					</div>
+					<div class="menus bg-gray padding-x-64">	
+						<div id="menu-cards-container" class="menu-cards-container"></div>
+					</div>
+				</section>
+				<aside id="basket-container" class="basket-container">
+					<article id="basket" class="basket">
+						<div>
+							<div id="basket-header" class="basket-header">
+								<h2>Basket</h2>
+								<img
+									id="close-basket"
+									class="d-none"
+									src="./img/icons/close.svg"
+									alt="close"
+									onclick="closeBasketMobile()"
+								/>
+							</div>
+							<div id="basket-elements"></div>
+						</div>
+						<div>
+							<div id="basket-total" class="basket-total"></div>
+							<div id="basket-checkout" onclick="checkOutBasket()"></div>
+						</div>
+					</article>
+				</aside>
+			</section>
+			<footer w3-include-html="templates/footer.html"></footer>
+		</main>
+		<!-- Button-hiden -->
+		<article id="basket-button-container" class="basket-button-container">
+			<button
+				id="button-openBasket-Mobile"
+				class="button-openBasket-Mobile"
+				onclick="openBasketMobile()"
+			>
+				<span
+					id="quantity-element-basket"
+					class="quantity-element-basket"
+				></span>
+				<img src="./img/icons/shopping_basket.svg" alt="shopping basket" /><span
+					>Basket</span
+				><span id="sum-basket-mobile"></span>
+			</button>
+		</article>
+		<script src="./html.templates.js"></script>
+		<script src="./script.js"></script>
+	</body>
+</html>
